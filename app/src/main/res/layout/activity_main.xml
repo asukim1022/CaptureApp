@@ -14,10 +14,10 @@
         android:textColor="#000" />
 
     <Button
-        android:id="@+id/capture_screen_shot"
+        android:id="@+id/captureScreenShot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Take ScreenShot" />
+        android:text="Capture" />
 
     <TextView
         android:id="@+id/textView"

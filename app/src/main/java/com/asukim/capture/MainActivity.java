@@ -26,15 +26,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         textView = (TextView) findViewById(R.id.textView);
-        textView.setText("Your ScreenShot Image:");
+        textView.setText("ScreenShot :");
 
-        captureScreenShot = (Button) findViewById(R.id.capture_screen_shot);
+        captureScreenShot = (Button) findViewById(R.id.captureScreenShot);
         imageView = (ImageView) findViewById(R.id.imageView);
 
-        Button capture_screen_shot = (Button) findViewById(R.id.capture_screen_shot);
-        capture_screen_shot.setOnClickListener(new View.OnClickListener() {
+        captureScreenShot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 screenShot(v);
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     public void createImage(Bitmap bmp) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         bmp.compress(Bitmap.CompressFormat.JPEG, 40, bytes);
-        File file = new File(Environment.getExternalStorageDirectory() + "/capturedscreenandroid.jpg");
+        File file = new File(Environment.getExternalStorageDirectory() + "/capture.jpg");
         try {
             file.createNewFile();
             FileOutputStream outputStream = new FileOutputStream(file);
